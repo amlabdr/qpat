@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qpat"
+version = "0.1.0"
+description = "Quantum Photonic Analysis Toolkit"
+requires-python = ">=3.10"
+
+dependencies = [
+  "numpy",
+  "scipy",
+  "pyyaml",
+  "sequence"
+]
+
+[project.optional-dependencies]
+sequence = [
+  "sequence-network"
+]
+
+[tool.setuptools.packages.find]
+include = ["qpat*"]

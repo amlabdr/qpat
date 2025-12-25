@@ -1,0 +1,17 @@
+workflow:
+  phases:
+    - name: fringe_scan
+      steps:
+        - capability: polarization_analysis
+          params:
+            alice_angle: 0
+            bob_angle: 0
+            emission_time: 1
+            frequency: 10e6
+
+        - capability: polarization_analysis
+          params:
+            alice_angle: 22.5
+            bob_angle: 0
+            emission_time: 1
+            frequency: 10e6

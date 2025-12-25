@@ -1,0 +1,32 @@
+topology:
+  nodes:
+    - name: Source
+      role: source
+      params:
+        frequency: 8e7
+        mean_photon_num: 0.1
+        bell_state: psi+
+
+    - name: Alice
+      role: polarization_measurement
+      params:
+        hwp_angle: 0.0
+        qwp_angle: 0.0
+
+    - name: Bob
+      role: polarization_measurement
+      params:
+        hwp_angle: 22.5
+        qwp_angle: 0.0
+
+  links:
+    - src: Source
+      dst: Alice
+      distance: 10000
+      attenuation: 0
+
+    - src: Source
+      dst: Bob
+      distance: 10000
+      attenuation: 0
+
